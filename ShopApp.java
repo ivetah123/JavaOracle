@@ -2,7 +2,8 @@ public class ShopApp {
         public static void main(String[] args) {
 
                 double tax = 0.2;
-                double total;                
+                double total;    
+//                
 
                 Clothing item1 = new Clothing();
                 Clothing item2 = new Clothing();
