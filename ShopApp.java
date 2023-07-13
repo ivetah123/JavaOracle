@@ -55,13 +55,15 @@ public class ShopApp {
                                 Pinky.size = "unknown";                                                                                                       
                 } */                                                                                                                                          
                                                                                                                                                               
-                //System.out.println("size is: " + Pinky.size);                                                                                               
+                //System.out.println("size is: " + Pinky.size);   
+        		
+        		System.out.println("min price is " + Clothing.MIN_PRICE);
                                                                                                                                                               
-                Clothing cloth1 = new Clothing();                                                                                                             
-                Clothing cloth2 = new Clothing();                                                                                                             
-                Clothing cloth3 = new Clothing();                                                                                                             
-                Clothing cloth4 = new Clothing();                                                                                                             
-                Clothing cloth5 = new Clothing();                                                                                                             
+                Clothing cloth1 = new Clothing("veste",34.5, 3);                                                                                                             
+                Clothing cloth2 = new Clothing("shawl", 21, 6);                                                                                                             
+                Clothing cloth3 = new Clothing("gloves",55, 9);                                                                                                             
+                Clothing cloth4 = new Clothing("cap",44, 12);                                                                                                             
+                Clothing cloth5 = new Clothing("pullover", 12, 2);                                                                                                             
                                                                                                                                                               
                 Clothing[] cloths = new Clothing[5];                                                                                                          
                 cloths[0] = cloth1;                                                                                                                           
@@ -70,7 +72,7 @@ public class ShopApp {
                 cloths[3] = cloth4;                                                                                                                           
                 cloths[4] = cloth5;                                                                                                                           
                                                                                                                                                               
-                cloths[0].setDescription("jacket");                                                                                                           
+                /**cloths[0].setDescription("jacket");                                                                                                           
                 cloths[1].setDescription("shirt");                                                                                                            
                 cloths[2].setDescription("trousers");                                                                                                         
                 cloths[3].setDescription("shoes");                                                                                                            
@@ -86,11 +88,12 @@ public class ShopApp {
                 cloths[1].setSize(3);                                                                                                                       
                 cloths[2].setSize(6);                                                                                                                       
                 cloths[3].setSize(9);                                                                                                                      
-                cloths[4].setSize(12);                                                                                                                     
+                cloths[4].setSize(12);  */                                                                                                                   
                                          
                 
-                Customer cust1 = new Customer();
-                cust1.addItems(cloths);
+                Customer cust1 = new Customer("Pinky", 3);
+                System.out.println("Customer 1 is " + cust1.getName() + ", size is " + cust1.getSize());
+                cust1.addItems(cloths); 
                 
                 /**for (Clothing cloth : cloths) {                                                                                                               
                         //if ((cloth.size.equals("XXL")) || (cloth.size.equals("XL")) || (cloth.size == "L") || (cloth.size == "M") || (cloth.size == "S") ) {

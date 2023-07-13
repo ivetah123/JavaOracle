@@ -1,12 +1,18 @@
 
 
 public class Clothing  {
-    private String description;
+    public Clothing(String description, double price, int size) {
+		super();
+		this.description = description;
+		this.price = price;
+		setSize(size);
+	}
+	private String description;
     private double price;
     private String size;
     
-    private final int MIN_PRICE = 10;
-    private final double TAX = 0.2;
+    public static final int MIN_PRICE = 10;
+    public static final double TAX = 0.2;
     
 	public String getDescription() {
 		return description;

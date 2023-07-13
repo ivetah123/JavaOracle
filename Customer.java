@@ -1,5 +1,13 @@
 
 public class Customer {
+
+		public Customer(String name, int size) {
+			super();
+			this.name = name;
+			setSize(size);
+		}
+
+		private String name;
         private String size;
         private Clothing[] items = new Clothing[5];
         private double total = 0;
@@ -10,6 +18,13 @@ public class Customer {
 
 		public void setSize(String size) {
 			this.size = size;
+		}
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
 		}
 		
 		public void setSize(int size) {
