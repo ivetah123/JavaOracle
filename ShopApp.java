@@ -3,6 +3,7 @@ public class ShopApp {
 
                 double tax = 0.2;
                 double total;
+                
 
                 Clothing item1 = new Clothing();
                 Clothing item2 = new Clothing();
