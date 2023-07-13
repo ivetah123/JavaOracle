@@ -82,22 +82,26 @@ public class ShopApp {
                 cloths[3].setPrice(15.5);                                                                                                                     
                 cloths[4].setPrice(16.5);                                                                                                                     
                                                                                                                                                               
-                cloths[0].setSize("S");                                                                                                                       
-                cloths[1].setSize("M");                                                                                                                       
-                cloths[2].setSize("L");                                                                                                                       
-                cloths[3].setSize("XL");                                                                                                                      
-                cloths[4].setSize("XXL");                                                                                                                     
-                                                                                                                                                              
+                cloths[0].setSize(2);                                                                                                                       
+                cloths[1].setSize(3);                                                                                                                       
+                cloths[2].setSize(6);                                                                                                                       
+                cloths[3].setSize(9);                                                                                                                      
+                cloths[4].setSize(12);                                                                                                                     
+                                         
+                
+                Customer cust1 = new Customer();
+                cust1.addItems(cloths);
+                
                 for (Clothing cloth : cloths) {                                                                                                               
                         //if ((cloth.size.equals("XXL")) || (cloth.size.equals("XL")) || (cloth.size == "L") || (cloth.size == "M") || (cloth.size == "S") ) {
                     System.out.println("Clothe is " + cloth.getDescription() + ", price is " + cloth.getPrice() + ", size is " + cloth.getSize());            
-                	total += cloth.getPrice();                                                                                                                
+//                	total += cloth.getPrice();                                                                                                                
 //                              total *= (1+tax);                                                                                                             
                         //}                                                                                                                                   
                         //if (total > 15) break;                                                                                                              
                 }                                                                                                                                             
                                                                                                                                                               
-                System.out.println("Total is " + total);                                                                                                      
+                System.out.println("Total is " + cust1.getTotalClothingCost());                                                                                                      
                                                                                                                                                               
 //              System.out.println("cloth1 description is " + cloth1.description);                                                                            
 //              System.out.println("cloths[1].description is " + cloths[1].description);                                                                      

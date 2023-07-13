@@ -5,8 +5,8 @@ public class Clothing  {
     private double price;
     private String size;
     
-    private final int minPrice = 10;
-    private final double tax = 0.2;
+    private final int MIN_PRICE = 10;
+    private final double TAX = 0.2;
     
 	public String getDescription() {
 		return description;
@@ -15,10 +15,10 @@ public class Clothing  {
 		this.description = description;
 	}
 	public double getPrice() {
-		return (1+tax)*price;
+		return (1+TAX)*price;
 	}
 	public void setPrice(double price) {
-		//if (price >= minPrice)
+		//if (price >= MIN_PRICE)
 			this.price = price;
 	}
 	public String getSize() {
@@ -27,4 +27,30 @@ public class Clothing  {
 	public void setSize(String size) {
 		this.size = size;
 	}
+	public void setSize(int size) {
+		
+        switch (size) {
+                case 1:
+                case 2:
+                case 3:
+                        this.size = "S";
+                        break;
+
+                case 6:
+                        this.size = "M";
+                        break;
+
+                case 9:
+                        this.size = "L";
+                        break;
+
+                case 12:
+                        this.size = "XL";
+                        break;
+
+                default:
+                        this.size = "unknown";
+        }
+	}
+	
 }
