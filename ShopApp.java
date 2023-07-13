@@ -92,16 +92,20 @@ public class ShopApp {
                 Customer cust1 = new Customer();
                 cust1.addItems(cloths);
                 
-                for (Clothing cloth : cloths) {                                                                                                               
+                /**for (Clothing cloth : cloths) {                                                                                                               
                         //if ((cloth.size.equals("XXL")) || (cloth.size.equals("XL")) || (cloth.size == "L") || (cloth.size == "M") || (cloth.size == "S") ) {
                     System.out.println("Clothe is " + cloth.getDescription() + ", price is " + cloth.getPrice() + ", size is " + cloth.getSize());            
 //                	total += cloth.getPrice();                                                                                                                
 //                              total *= (1+tax);                                                                                                             
                         //}                                                                                                                                   
                         //if (total > 15) break;                                                                                                              
-                }                                                                                                                                             
+                }            */
+                
+                for (Clothing item : cust1.getItems()) {
+                	System.out.println("Item is " + item.getDescription() + ", size is " + item.getSize() + ", price is " + item.getPrice());
+                }
                                                                                                                                                               
-                System.out.println("Total is " + cust1.getTotalClothingCost());                                                                                                      
+                System.out.println(cust1.getTotalClothingCost());                                                                                                      
                                                                                                                                                               
 //              System.out.println("cloth1 description is " + cloth1.description);                                                                            
 //              System.out.println("cloths[1].description is " + cloths[1].description);                                                                      

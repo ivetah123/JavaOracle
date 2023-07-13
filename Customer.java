@@ -37,7 +37,7 @@ public class Customer {
                             this.size = "unknown";
             }
 		}
-		
+//*********************************************************************		
 		public void addItems(Clothing[] items) {
 			this.items = items;	
 		}
@@ -48,7 +48,7 @@ public class Customer {
 		
 		public String getTotalClothingCost() {
 			for (Clothing item : items)
-			total +=  item.getPrice();
+				total +=  item.getPrice();
 			return ("Total is " + total);
 		}
 }
