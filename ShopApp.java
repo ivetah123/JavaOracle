@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class ShopApp {                                                                                                                                        
 	                                                                                                                                                          
         public static void main(String[] args) {                                                                                                              
@@ -58,7 +60,7 @@ public class ShopApp {
                                                                                                                                                               
                 //System.out.println("size is: " + Pinky.size);   
         		
-        		System.out.println("min price is " + Clothing.MIN_PRICE);
+//        		System.out.println("min price is " + Clothing.MIN_PRICE);
                                                                                                                                                               
                 Clothing cloth1 = new Clothing("veste",34.5, 3);                                                                                                             
                 Clothing cloth2 = new Clothing("shawl", 21, 6);                                                                                                             
@@ -93,7 +95,7 @@ public class ShopApp {
                                          
                 
                 Customer cust1 = new Customer("Pinky", 3);
-                System.out.println("Customer 1 is " + cust1.getName() + ", size is " + cust1.getSize());
+ //               System.out.println("Customer 1 is " + cust1.getName() + ", size is " + cust1.getSize());
                 cust1.addItems(cloths); 
                 System.out.println("*********************************************************************************************************************************");
                 
@@ -117,7 +119,7 @@ public class ShopApp {
  //               	System.out.println(counter);
                 }*/
                 System.out.println("*********************************************************************************************************************************");
-                try {
+/*                try {
 //                	if (counter != 0)
                 	average /= counter;
                 } catch (ArithmeticException e) {
@@ -129,10 +131,13 @@ public class ShopApp {
 //                System.out.println(2/0);
                                                                                                                                                               
 //              System.out.println("cloth1 description is " + cloth1.description);                                                                            
-//              System.out.println("cloths[1].description is " + cloths[1].description);     
+//              System.out.println("cloths[1].description is " + cloths[1].description);   */  
                 
                 System.out.println("*********************************************************************************************************************************");
                 System.out.println("*********************************************************************************************************************************");
+                
+                Arrays.sort(cloths);
+                
                 System.out.println("*********************************************************************************************************************************");
                 
                 System.out.println("Item's toString() method gets called authomatically: \n" );

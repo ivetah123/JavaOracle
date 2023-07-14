@@ -1,6 +1,6 @@
 
 
-public class Clothing  {
+public class Clothing implements Comparable<Clothing> {
     public Clothing(String description, double price, int size) {
 		super();
 		this.description = description;
@@ -64,6 +64,10 @@ public class Clothing  {
 		
 		return ("The description is " + getDescription() + ",  price is " + getPrice() + ", size is " + getSize());
 		
+	}
+	@Override
+	public int compareTo(Clothing cloth) {
+		return this.description.compareTo(cloth.description);
 	}
 	
 }
