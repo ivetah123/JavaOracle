@@ -1,4 +1,11 @@
 import java.util.Arrays;
+import io.helidon.webserver.Routing;
+import io.helidon.webserver.ServerConfiguration;
+import io.helidon.webserver.WebServer;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+//import java.util.logging.Level;
+//import java.util.logging.Logger;
 
 public class ShopApp {                                                                                                                                        
 	                                                                                                                                                          
@@ -68,12 +75,12 @@ public class ShopApp {
                 Clothing cloth4 = new Clothing("cap",44, 12);                                                                                                             
                 Clothing cloth5 = new Clothing("pullover", 12, 2);                                                                                                             
                                                                                                                                                               
-                Clothing[] cloths = new Clothing[5];                                                                                                          
-                cloths[0] = cloth1;                                                                                                                           
-                cloths[1] = cloth2;                                                                                                                           
-                cloths[2] = cloth3;                                                                                                                           
-                cloths[3] = cloth4;                                                                                                                           
-                cloths[4] = cloth5;                                                                                                                           
+                Clothing[] items = new Clothing[5];                                                                                                          
+                items[0] = cloth1;                                                                                                                           
+                items[1] = cloth2;                                                                                                                           
+                items[2] = cloth3;                                                                                                                           
+                items[3] = cloth4;                                                                                                                           
+                items[4] = cloth5;                                                                                                                           
                                                                                                                                                               
                 /**cloths[0].setDescription("jacket");                                                                                                           
                 cloths[1].setDescription("shirt");                                                                                                            
@@ -96,7 +103,7 @@ public class ShopApp {
                 
                 Customer cust1 = new Customer("Pinky", 3);
  //               System.out.println("Customer 1 is " + cust1.getName() + ", size is " + cust1.getSize());
-                cust1.addItems(cloths); 
+                cust1.addItems(items); 
                 System.out.println("*********************************************************************************************************************************");
                 
                 /**for (Clothing cloth : cloths) {                                                                                                               
@@ -136,7 +143,7 @@ public class ShopApp {
                 System.out.println("*********************************************************************************************************************************");
                 System.out.println("*********************************************************************************************************************************");
                 
-                Arrays.sort(cloths);
+                Arrays.sort(items);
                 
                 System.out.println("*********************************************************************************************************************************");
                 
@@ -146,30 +153,24 @@ public class ShopApp {
                 	System.out.println(item);
                 }
                 
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+                
+                try {
+                	ItemList list = new ItemList(items);
+                	Routing routing = Routing.builder()
+                			.get("/items", list).build();
+                	
+                	ServerConfiguration config = ServerConfiguration.builder()
+                			.bindAddress(InetAddress.getLocalHost())
+                			.port(8886).build();
+                	
+                	WebServer ws = WebServer.create(config, routing);
+                	ws.start();
+                } catch (UnknownHostException ex) { 
+                	ex.printStackTrace();
+                }
                                                                                                                                                               
-        }    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        }
         
         
         
