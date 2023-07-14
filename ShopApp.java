@@ -2,9 +2,10 @@ public class ShopApp {
 	                                                                                                                                                          
         public static void main(String[] args) {                                                                                                              
         		double total = 0;                                                                                                                             
+        		int average = 0;  
+        		int counter = 0;
         		                                                                                                                                              
-        		                                                                                                                                              
-//                double tax = 0.2;                                                                                                                           
+//                double tax = 0.2; 
                                                                                                                                                               
                                                                                                                                                               
 //                                                                                                                                                            
@@ -94,6 +95,7 @@ public class ShopApp {
                 Customer cust1 = new Customer("Pinky", 3);
                 System.out.println("Customer 1 is " + cust1.getName() + ", size is " + cust1.getSize());
                 cust1.addItems(cloths); 
+                System.out.println("*********************************************************************************************************************************");
                 
                 /**for (Clothing cloth : cloths) {                                                                                                               
                         //if ((cloth.size.equals("XXL")) || (cloth.size.equals("XL")) || (cloth.size == "L") || (cloth.size == "M") || (cloth.size == "S") ) {
@@ -106,9 +108,25 @@ public class ShopApp {
                 
                 for (Clothing item : cust1.getItems()) {
                 	System.out.println("Item is " + item.getDescription() + ", size is " + item.getSize() + ", price is " + item.getPrice());
+                	average += item.getPrice();
+                	System.out.println(average);
+                	if (item.getSize().equals("F")) {
+                			
+                			counter++;
+                		}
+                	System.out.println(counter);
                 }
+                System.out.println("*********************************************************************************************************************************");
+ //               try {
+//                	if (counter != 0)
+                	average /= counter;
+/*                } catch (ArithmeticException e) {
+                	System.out.println("You cannot divide by zero, you bad boy!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                }*/
                                                                                                                                                               
-                System.out.println(cust1.getTotalClothingCost());                                                                                                      
+                System.out.println(cust1.getTotalClothingCost());    
+                System.out.println("Average is " + average);
+//                System.out.println(2/0);
                                                                                                                                                               
 //              System.out.println("cloth1 description is " + cloth1.description);                                                                            
 //              System.out.println("cloths[1].description is " + cloths[1].description);                                                                      
