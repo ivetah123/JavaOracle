@@ -106,30 +106,70 @@ public class ShopApp {
                         //if (total > 15) break;                                                                                                              
                 }            */
                 
-                for (Clothing item : cust1.getItems()) {
+/*                for (Clothing item : cust1.getItems()) {
                 	System.out.println("Item is " + item.getDescription() + ", size is " + item.getSize() + ", price is " + item.getPrice());
                 	average += item.getPrice();
-                	System.out.println(average);
-                	if (item.getSize().equals("F")) {
+//                	System.out.println(average);
+//                	if (item.getSize().equals("F")) {
                 			
                 			counter++;
-                		}
-                	System.out.println(counter);
-                }
+//                		}
+ //               	System.out.println(counter);
+                }*/
                 System.out.println("*********************************************************************************************************************************");
- //               try {
+                try {
 //                	if (counter != 0)
                 	average /= counter;
-/*                } catch (ArithmeticException e) {
+                } catch (ArithmeticException e) {
                 	System.out.println("You cannot divide by zero, you bad boy!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-                }*/
+                }
                                                                                                                                                               
                 System.out.println(cust1.getTotalClothingCost());    
                 System.out.println("Average is " + average);
 //                System.out.println(2/0);
                                                                                                                                                               
 //              System.out.println("cloth1 description is " + cloth1.description);                                                                            
-//              System.out.println("cloths[1].description is " + cloths[1].description);                                                                      
+//              System.out.println("cloths[1].description is " + cloths[1].description);     
+                
+                System.out.println("*********************************************************************************************************************************");
+                System.out.println("*********************************************************************************************************************************");
+                System.out.println("*********************************************************************************************************************************");
+                
+                System.out.println("Item's toString() method gets called authomatically: \n" );
+                
+                for (Clothing item : cust1.getItems()) {
+                	System.out.println(item);
+                }
+                
                                                                                                                                                               
-        }                                                                                                                                                     
+        }    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 }                                                                                                                                                             

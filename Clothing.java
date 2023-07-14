@@ -58,5 +58,12 @@ public class Clothing  {
                         this.size = "unknown";
         }
 	}
+	/*****************************************************************************************************************************/
+	@Override
+	public String toString() {
+		
+		return ("The description is " + getDescription() + ",  price is " + getPrice() + ", size is " + getSize());
+		
+	}
 	
 }
